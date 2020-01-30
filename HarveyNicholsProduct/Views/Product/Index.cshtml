@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <form id="productForm">
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <label for="drpStyle">Style</label>
+                <select class="form-control" id="drpStyle">
+                    <option value="0">Select</option>
+                    <option value="1">Sport</option>
+                    <option value="2">Casual</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="drpColour">Colour</label>
+                <select class="form-control" id="drpColour">
+                    <option value="0">Select</option>
+                    <option value="1">Black</option>
+                    <option value="2">White</option>
+                    <option value="3">Red</option>
+                    <option value="4">Green</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="txtSku">Sku</label>
+                <input type="text" class="form-control" id="txtSku" placeholder="Enter sku">
+            </div>
+            <div class="form-group">
+                <label for="txtTitle">Title</label>
+                <input type="text" class="form-control" id="txtTitle" placeholder="Enter title">
+            </div>
+            <div class="form-group">
+                <label for="txtPrice">Price</label>
+                <input type="number" class="form-control" id="txtPrice" placeholder="Enter price">
+            </div>
+            <div class="form-group">
+                <label for="txtStock">Stock</label>
+                <input type="number" class="form-control" id="txtStock" placeholder="Enter stock">
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/product/index.js"></script>
+}
